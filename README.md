@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Setup Instructions
+Prerequisites
 
-## Getting Started
+Node.js 18+
 
-First, run the development server:
+npm or yarn
 
-```bash
+Installation
+git clone <repository-url>
+cd assignment-upstep
+npm install
+
+Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open your browser and navigate to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🧠 Key Technical Decisions
+1. Next.js App Router
+The project uses Next.js 13+ App Router (app/ directory) to align with modern Next.js best practices and demonstrate familiarity with the latest routing and rendering model.
 
-To learn more about Next.js, take a look at the following resources:
+2. Static JSON for Tournament Data
+Tournament data is stored in a static JSON file (/public/mock.json) and fetched on the client.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Client-side State Management
+Local React state (useState, useEffect) is used for:
+Tournament data loading
+Filtering by status
+Mocked “Join tournament” interaction
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Component-based Architecture
+The UI is broken into small, focused components:
+TournamentList
+TournamentCard
+TournamentFilters
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📋 Features Implemented
+Tournament list displaying:
+Name
+Time control
+Start time
+Players joined / max players
+Status
+Filter by tournament status
+Join tournament button with disabled state when full
+Responsive layout
+Loading and empty states
